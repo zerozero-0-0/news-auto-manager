@@ -1,5 +1,10 @@
+from func.summarize_news import summarize_news
+from func.get_global_news import get_global_news
+
 def main():
-    print("Hello from news-auto-manager!")
+    articles = get_global_news()
+    summary = summarize_news(articles)
+    print(summary)
 
 
 if __name__ == "__main__":
