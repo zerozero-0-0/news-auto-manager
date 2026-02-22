@@ -1,8 +1,7 @@
 from dotenv import load_dotenv
 import os
 import requests
-from interfaces.data import JSONResponse, COREDATA
-from pydantic import ValidationError
+from interfaces.data import COREDATA
 
 load_dotenv()
 
@@ -26,7 +25,7 @@ def get_global_news():
     res = requests.get(url, params=params)
     payload = res.json()
 
-    print(payload)
+    # print(payload)
 
     data = []
 

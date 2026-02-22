@@ -1,4 +1,3 @@
-from lib2to3.pytree import Base
 from pydantic import BaseModel
 
 
@@ -26,4 +25,9 @@ class JSONResponse(BaseModel):
 class COREDATA(BaseModel):
     title: str
     description: str
+    url: str
+
+class DisplayData(BaseModel):
+    title: str
+    summary: str
     url: str
