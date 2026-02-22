@@ -1,7 +1,7 @@
 from dotenv import load_dotenv
 import os
 import requests
-from interfaces.data import COREDATA
+from interfaces.data import CoreData
 
 load_dotenv()
 
@@ -30,7 +30,7 @@ def get_global_news():
     data = []
 
     for p in payload["articles"]:
-        current_data = COREDATA(
+        current_data = CoreData(
             title=p["title"],
             description=p["description"],
             url=p["url"]

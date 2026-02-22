@@ -1,13 +1,13 @@
 from pydantic import BaseModel
 
 
-class _SOURCE(BaseModel):
+class Source(BaseModel):
     id: str | None
     name: str
 
 
-class _data_class(BaseModel):
-    source: _SOURCE
+class DataClass(BaseModel):
+    source: Source
     author: str | None
     title: str | None
     description: str | None
@@ -20,9 +20,9 @@ class _data_class(BaseModel):
 class JSONResponse(BaseModel):
     status: str
     totalResults: int
-    articles: list[_data_class]
+    articles: list[DataClass]
 
-class COREDATA(BaseModel):
+class CoreData(BaseModel):
     title: str
     description: str
     url: str

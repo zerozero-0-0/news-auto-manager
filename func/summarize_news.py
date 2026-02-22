@@ -1,8 +1,8 @@
 from google import genai
-from interfaces.data import COREDATA, DisplayData
+from interfaces.data import CoreData, DisplayData
 import time
 
-def summarize_news(articles: list[COREDATA]):
+def summarize_news(articles: list[CoreData]) -> list[DisplayData] | str:
     if not articles:
         return "ニュースが見つかりませんでした"
 
