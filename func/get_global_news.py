@@ -26,6 +26,21 @@ def get_global_news():
     res = requests.get(url, params=params)
     payload = res.json()
 
+    print(payload)
+
+    data = []
+
+    for p in payload["articles"]:
+        current_data = COREDATA(
+            title=p["title"],
+            description=p["description"],
+            url=p["url"]
+        )
+        data.append(current_data)
     
+    return data
+
 if __name__ == "__main__":
-    get_global_news()
+    result = get_global_news()
+    for item in result:
+        print(item)
