@@ -14,7 +14,7 @@ if WEBHOOK_URL is None:
 
 def send_message_to_url(data: list[DisplayData] | str):
     if isinstance(data, str):
-        return
+        raise ValueError("データが空です")
 
     for each_data in data:
         embed = {
