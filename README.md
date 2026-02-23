@@ -14,5 +14,5 @@
 
 ### 使用方法
 GitHub Actionsを使用して、毎朝7:00(日本時間)にスクリプトが走るようにしています。
-時間の調整は`workflows/daily_news.yml`の`cron`セクションで行うことができます。
+時間の調整は`.github/workflows/daily_news.yml`の`cron`セクションで行うことができます。
 クローンしたリポジトリの`settings`から`Secrets and variables` -> `Actions` -> `New repository secret`で、`.env`ファイルに記載した環境変数を設定してください。

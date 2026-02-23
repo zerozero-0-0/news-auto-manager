@@ -6,7 +6,7 @@
 ## 技術スタック
 - Python 3.10
 - newsapi
-- gemini-2.5-flash-lite  // リクエストの制限が緩いため
+- gemini-2.5-flash  // リクエストの制限が緩いため
 - uv
   (以下、現時点では未導入)
 - Docker
