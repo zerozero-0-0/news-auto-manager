@@ -5,10 +5,10 @@ import requests
 
 load_dotenv()
 
-WEBHOCK_URL = os.getenv("WEBHOCK_URL")
+WEBHOOK_URL = os.getenv("WEBHOOK_URL")
 
-if WEBHOCK_URL is None:
-    raise ValueError("環境変数WEBHOCK_URLが設定されていません")
+if WEBHOOK_URL is None:
+    raise ValueError("環境変数WEBHOOK_URLが設定されていません")
 
 
 
@@ -27,7 +27,7 @@ def send_message_to_url(data: list[DisplayData] | str):
             "embeds": [embed]
         }
 
-        res = requests.post(WEBHOCK_URL, json=payload)
+        res = requests.post(WEBHOOK_URL, json=payload)
         if res.status_code != 204:
             print(f"Failed to send message: {res.status_code}, {res.text}")
     
