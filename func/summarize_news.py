@@ -1,6 +1,7 @@
 from google import genai
 from interfaces.data import CoreData, DisplayData
 import time
+from constants import REQUEST_INTERVAL_SECONDS
 
 def summarize_news(articles: list[CoreData]) -> list[DisplayData] | str:
     if not articles:
@@ -32,7 +33,7 @@ def summarize_news(articles: list[CoreData]) -> list[DisplayData] | str:
             url=article.url
         )
         outputs.append(current_data)
-        time.sleep(5) # 15回/1min なので本番は5sにする  
+        time.sleep(REQUEST_INTERVAL_SECONDS) # 15回/1min なので本番は5sにする  
 
     return outputs
 
