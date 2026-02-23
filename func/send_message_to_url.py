@@ -29,7 +29,7 @@ def send_message_to_url(data: list[DisplayData] | str):
 
         res = requests.post(WEBHOOK_URL, json=payload)
         if res.status_code != 204:
-            print(f"Failed to send message: {res.status_code}, {res.text}")
+            raise Exception(f"Failed to send message: {res.status_code}, {res.text}")
     
 
     
