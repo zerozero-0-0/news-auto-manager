@@ -16,7 +16,7 @@ def get_global_news():
     params = {
         "category": "business",
         "language": "en",
-        "pageSize": 5,
+        "pageSize": 1,
         "apiKey": NEWS_API_KEY
     }
 

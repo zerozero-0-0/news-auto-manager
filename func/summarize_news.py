@@ -15,18 +15,11 @@ def summarize_news(articles: list[CoreData]) -> list[DisplayData] | str:
     回答のみを出力してください。だ・である調にして。
     """
 
-    prompt = f"{base_prompt}\n\nタイトル: {articles[0].title}\n説明: {articles[0].description}"
-    res = client.models.generate_content(
-        model="gemini-2.5-flash-lite",
-        contents=prompt
-    )
-
-    print(res.text)
 
     for article in articles:
         prompt = f"{base_prompt}\n\nタイトル: {article.title}\n説明: {article.description}"
         response = client.models.generate_content(
-            model="gemini-2.5-flash-lite",
+            model="gemini-2.5-flash",
             contents=prompt
         )
 
@@ -39,7 +32,7 @@ def summarize_news(articles: list[CoreData]) -> list[DisplayData] | str:
             url=article.url
         )
         outputs.append(current_data)
-        time.sleep(3)  
+        time.sleep(5) # 15回/1min なので本番は5sにする  
 
     return outputs
 
