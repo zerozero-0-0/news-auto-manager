@@ -9,8 +9,8 @@
 2. `uv sync --frozen`を実行してください。まだ`uv`がない場合は、公式ドキュメントを参照して導入してください
 3. `env.example`をコピーして`.env`ファイルを作成し、必要な環境変数を設定してください
 4. `Google AI Studio`でAPIキーを取得し、`GEMINI_API_KEY`のバリューに設定してください
-4. `NEWSAPI`でAPIキーを取得し、`NEWSAPI_KEY`のバリューに設定してください
-5. メッセージを送りたい`Discord`のサーバーのurlを`DISCORD_WEBHOOK_URL`のバリューに設定してください
+5. `NEWSAPI`でAPIキーを取得し、`NEWSAPI_KEY`のバリューに設定してください
+6. メッセージを送りたい`Discord`のサーバーのurlを`WEBHOOK_URL`のバリューに設定してください
 
 ### 使用方法
 GitHub Actionsを使用して、毎朝7:00(日本時間)にスクリプトが走るようにしています。
