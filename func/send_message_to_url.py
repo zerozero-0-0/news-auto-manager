@@ -12,7 +12,7 @@ def send_message_to_url(data: list[DisplayData] | str):
         raise ValueError("環境変数WEBHOOK_URLが設定されていません")
     
     if isinstance(data, str):
-        print(data)
+        raise ValueError("データが空です")
         return
 
     for each_data in data:
