@@ -7,7 +7,6 @@ load_dotenv()
 
 WEBHOOK_URL = os.getenv("WEBHOOK_URL")
 
-
 def send_message_to_url(data: list[DisplayData] | str):
     if WEBHOOK_URL is None:
         raise ValueError("環境変数WEBHOOK_URLが設定されていません")
